@@ -21,8 +21,8 @@ export default async function Home() {
     md = data[0];
   } catch (e) {
     error = (e as Error).message;
+    console.log(error);
   }
-  if (error && typeof window !== 'undefined') alert(error);
   const html = marked(md);
   return (
     <>
